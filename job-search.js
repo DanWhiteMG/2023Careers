@@ -1,6 +1,8 @@
 // POST URL for Relevance Search in Microsoft Power Apps
 
-let _0xee6d = ["\x68\x74\x74\x70\x73\x3a\x2f\x2f\x70\x72\x6f\x64\x2d\x32\x33\x2e\x75\x6b\x73\x6f\x75\x74\x68\x2e\x6c\x6f\x67\x69\x63\x2e\x61\x7a\x75\x72\x65\x2e\x63\x6f\x6d\x3a\x34\x34\x33\x2f\x77\x6f\x72\x6b\x66\x6c\x6f\x77\x73\x2f\x63\x61\x61\x34\x31\x38\x63\x37\x35\x34\x34\x34\x34\x37\x33\x36\x62\x33\x64\x34\x35\x64\x65\x33\x65\x34\x65\x32\x61\x66\x39\x33\x2f\x74\x72\x69\x67\x67\x65\x72\x73\x2f\x6d\x61\x6e\x75\x61\x6c\x2f\x70\x61\x74\x68\x73\x2f\x69\x6e\x76\x6f\x6b\x65\x3f\x61\x70\x69\x2d\x76\x65\x72\x73\x69\x6f\x6e\x3d\x32\x30\x31\x36\x2d\x30\x36\x2d\x30\x31\x26\x73\x70\x3d\x25\x32\x46\x74\x72\x69\x67\x67\x65\x72\x73\x25\x32\x46\x6d\x61\x6e\x75\x61\x6c\x25\x32\x46\x72\x75\x6e\x26\x73\x76\x3d\x31\x2e\x30\x26\x73\x69\x67\x3d\x41\x63\x79\x47\x66\x33\x65\x6d\x35\x31\x7a\x58\x74\x47\x53\x68\x49\x6b\x62\x64\x53\x35\x72\x65\x38\x39\x53\x32\x62\x70\x5f\x73\x43\x55\x6e\x44\x62\x53\x4e\x70\x5f\x73\x73"];
+//let _0xee6d = ["\x68\x74\x74\x70\x73\x3a\x2f\x2f\x70\x72\x6f\x64\x2d\x32\x33\x2e\x75\x6b\x73\x6f\x75\x74\x68\x2e\x6c\x6f\x67\x69\x63\x2e\x61\x7a\x75\x72\x65\x2e\x63\x6f\x6d\x3a\x34\x34\x33\x2f\x77\x6f\x72\x6b\x66\x6c\x6f\x77\x73\x2f\x63\x61\x61\x34\x31\x38\x63\x37\x35\x34\x34\x34\x34\x37\x33\x36\x62\x33\x64\x34\x35\x64\x65\x33\x65\x34\x65\x32\x61\x66\x39\x33\x2f\x74\x72\x69\x67\x67\x65\x72\x73\x2f\x6d\x61\x6e\x75\x61\x6c\x2f\x70\x61\x74\x68\x73\x2f\x69\x6e\x76\x6f\x6b\x65\x3f\x61\x70\x69\x2d\x76\x65\x72\x73\x69\x6f\x6e\x3d\x32\x30\x31\x36\x2d\x30\x36\x2d\x30\x31\x26\x73\x70\x3d\x25\x32\x46\x74\x72\x69\x67\x67\x65\x72\x73\x25\x32\x46\x6d\x61\x6e\x75\x61\x6c\x25\x32\x46\x72\x75\x6e\x26\x73\x76\x3d\x31\x2e\x30\x26\x73\x69\x67\x3d\x41\x63\x79\x47\x66\x33\x65\x6d\x35\x31\x7a\x58\x74\x47\x53\x68\x49\x6b\x62\x64\x53\x35\x72\x65\x38\x39\x53\x32\x62\x70\x5f\x73\x43\x55\x6e\x44\x62\x53\x4e\x70\x5f\x73\x73"];
+let _0xee6d = ["https://prod-20.uksouth.logic.azure.com:443/workflows/4ada2311615f4959803e87bad2d3cca5/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=5tOfCYNWzo6_RcQ5HFwqjAZsdltIkuPQUYnbjT6bbPA"];
+
 const url = _0xee6d[0]
 
 // Use wildcard query to retrieve all results for initial load
@@ -94,17 +96,17 @@ function printArrayToDOM(array) {
             let jobDate = document.createElement("p");
             jobDate.classList.add("job-date");
             // add content to created elements
-            newLink.href = `/find-a-job/${array[i].cr24b_jobrequisitionid}`;
-            jobTitle.textContent = array[i].cr24b_jobpostingtitle;
-            jobReqId.textContent = array[i].cr24b_jobrequisitionid;
-            jobType.textContent = array[i].cr24b_workersubtype;
-            jobLocation.textContent = `${array[i].cr24b_primaryjobpostinglocation} - ${array[i].cr24b_primaryjobpostinglocationhierarchy}`;
-            ////jobSalary.textContent = array[i].cr24b_pay_text;
+            newLink.href = `/find-a-job/${array[i].crfd0_urlslugname}`;
+            jobTitle.textContent = array[i].crfd0_jobtitle;
+            jobReqId.textContent = array[i].crfd0_jobreqid;
+            jobType.textContent = array[i].crfd0_jobtype;
+            jobLocation.textContent = `${array[i].crfd0_location} - ${array[i].crfd0_region}`;
+            ////jobSalary.textContent = array[i].crfd0_paytextforadvert;
             // amend date format to UK date format for Last Updated Date
 			
 			
 			
-            let lastUpdated = stringToDate(array[i].cr24b_recruitingstartdate, "yyyy-mm-dd", "-"); //Updated
+            let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate, "yyyy-mm-dd", "-"); //Updated
             lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
             // append content to parent elements
@@ -211,7 +213,7 @@ function filterCheckboxes() {
     // Filter if only a region filter is defined and pass to sumFilter
     if (checkboxValuesRegion.length > 0 && checkboxValuesCategory.length < 1) {
         for (let i = 0; i < checkboxValuesRegion.length; i++) {
-            filteredRegion = unfilteredJobs.filter(e=>e.cr24b_primaryjobpostinglocationhierarchy === checkboxValuesRegion[i]);
+            filteredRegion = unfilteredJobs.filter(e=>e.crfd0_region === checkboxValuesRegion[i]);
             sumFilter.push(...filteredRegion)
         }
         // Run printArrayToDOM function but using the filtered array
@@ -219,7 +221,7 @@ function filterCheckboxes() {
     }// Filter if only a category filter is defined and pass to sumFilter
     else if (checkboxValuesRegion.length < 1 && checkboxValuesCategory.length > 0) {
         for (let i = 0; i < checkboxValuesCategory.length; i++) {
-            filteredCategory = unfilteredJobs.filter(e=>e.cr24b_job_category === checkboxValuesCategory[i]);
+            filteredCategory = unfilteredJobs.filter(e=>e.crfd0_jobcategory === checkboxValuesCategory[i]);
             sumFilter.push(...filteredCategory)
         }
         // Run printArrayToDOM function but using the filtered array
@@ -227,12 +229,12 @@ function filterCheckboxes() {
     }// Filter only if both a region and category filter are assigned. Pass to filteredCategory first and then to sumFilter.
     else if (checkboxValuesRegion.length > 0 && checkboxValuesCategory.length > 0) {
         for (let i = 0; i < checkboxValuesRegion.length; i++) {
-            filteredRegion = unfilteredJobs.filter(e=>e.cr24b_primaryjobpostinglocationhierarchy === checkboxValuesRegion[i]);
+            filteredRegion = unfilteredJobs.filter(e=>e.crfd0_region === checkboxValuesRegion[i]);
             filteredCategory.push(...filteredRegion)
         }
         // Now that the array is filtered by region, filter the array further using the category filter
         for (let i = 0; i < checkboxValuesCategory.length; i++) {
-            filteredBoth = filteredCategory.filter(e=>e.cr24b_job_category === checkboxValuesCategory[i]);
+            filteredBoth = filteredCategory.filter(e=>e.crfd0_jobcategory === checkboxValuesCategory[i]);
             sumFilter.push(...filteredBoth)
         }
         // Run printArrayToDOM function but using the filtered array
