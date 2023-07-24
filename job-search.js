@@ -56,6 +56,14 @@ function stringToDate(_date, _format, _delimiter) {
     return formatedDate;
 }
 
+// Function to shorten date
+
+function cutDownDate() {
+	let dateNew2023 = new Date(originalDateString);
+	let formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
+	return formattedDateNew2023;
+}
+
 
 // Function to print array to DOM
 
@@ -105,17 +113,18 @@ function printArrayToDOM(array) {
             jobLocation.textContent = `${array[i].crfd0_location} - ${array[i].crfd0_region}`;
             ////jobSalary.textContent = array[i].crfd0_paytextforadvert;
 
-
-	let originalDateString = array[i].crfd0_recruitingstartdate;
-	let dateNew2023 = new Date(originalDateString);
-	let formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
+let originalDateString = array[i].crfd0_recruitingstartdate;
+	
 		
 	// amend date format to UK date format for Last Updated Date 
-		console.log('Original: ' + originalDateString+ ' - Formatted: ' + formattedDateNew2023 + '');
+		
             //let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate, "dd/mm/yyyy", "/"); //Updated
             //lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
-            lastUpdated = formattedDateNew2023;
+            lastUpdated = cutDownDate(array[i].crfd0_recruitingstartdate);
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
+
+	console.log('Original: ' + array[i].crfd0_recruitingstartdate + ' - Formatted: ' + lastUpdated + '');
+		
             // append content to parent elements
             newLink.appendChild(jobReqId);
             newLink.appendChild(jobTitle);
