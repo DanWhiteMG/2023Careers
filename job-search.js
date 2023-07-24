@@ -113,6 +113,7 @@ function printArrayToDOM(array) {
 		console.log('Hello ' + formattedDateNew2023 + '');
             let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate, "dd/mm/yyyy", "/"); //Updated
             lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
+            lastUpdated = formattedDateNew2023;
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
             // append content to parent elements
             newLink.appendChild(jobReqId);
