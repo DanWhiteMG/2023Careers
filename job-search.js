@@ -122,7 +122,7 @@ let originalDateString = array[i].crfd0_recruitingstartdate;
             //lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
             //lastUpdated = cutDownDate(array[i].crfd0_recruitingstartdate);
 
-	lastupdated = array[i].crfd0_recruitingstartdate;
+	lastUpdated = array[i].crfd0_recruitingstartdate;
 		
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
 
