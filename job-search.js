@@ -100,8 +100,8 @@ function printArrayToDOM(array) {
             let jobLocation = document.createElement("p");
             jobLocation.classList.add("job-location");
             // create job salary and add class
-            ////let jobSalary = document.createElement("p");
-            ////jobSalary.classList.add("job-salary");
+            let jobSalary = document.createElement("p");
+            jobSalary.classList.add("job-salary");
             // create job salary and add class
             let jobDate = document.createElement("p");
             jobDate.classList.add("job-date");
