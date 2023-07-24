@@ -106,7 +106,7 @@ function printArrayToDOM(array) {
            
 		
 	// amend date format to UK date format for Last Updated Date
-				
+		console.log('Hello');		
             let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate, "dd/mm/yyyy", "/"); //Updated
             lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
