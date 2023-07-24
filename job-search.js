@@ -103,10 +103,14 @@ function printArrayToDOM(array) {
             jobType.textContent = array[i].crfd0_jobtype;
             jobLocation.textContent = `${array[i].crfd0_location} - ${array[i].crfd0_region}`;
             ////jobSalary.textContent = array[i].crfd0_paytextforadvert;
-           
+
+
+	const originalDateString = array[i].crfd0_recruitingstartdate;
+	const dateNew2023 = new Date(originalDateString);
+	const formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
 		
 	// amend date format to UK date format for Last Updated Date
-		console.log('Hello ' + array[i].crfd0_recruitingstartdate + '');
+		console.log('Hello ' + formattedDateNew2023 + '');
             let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate, "dd/mm/yyyy", "/"); //Updated
             lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
