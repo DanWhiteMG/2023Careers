@@ -103,11 +103,12 @@ function printArrayToDOM(array) {
             jobType.textContent = array[i].crfd0_jobtype;
             jobLocation.textContent = `${array[i].crfd0_location} - ${array[i].crfd0_region}`;
             ////jobSalary.textContent = array[i].crfd0_paytextforadvert;
-            // amend date format to UK date format for Last Updated Date
-			
-			
-			
-            let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate, "dd-mm-yyyy", "-"); //Updated
+           
+		
+	// amend date format to UK date format for Last Updated Date
+				
+            let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate@OData.Community.Display.V1.FormattedValue
+, "dd-mm-yyyy", "/"); //Updated
             lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
             // append content to parent elements
