@@ -58,7 +58,7 @@ function stringToDate(_date, _format, _delimiter) {
 
 // Function to shorten date
 
-function cutDownDate() {
+function cutDownDate(originalDateString) {
 	let dateNew2023 = new Date(originalDateString);
 	let formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
 	return formattedDateNew2023;
