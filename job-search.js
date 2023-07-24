@@ -120,10 +120,15 @@ let originalDateString = array[i].crfd0_recruitingstartdate;
 		
             //let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate, "dd/mm/yyyy", "/"); //Updated
             //lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
-            lastUpdated = cutDownDate(array[i].crfd0_recruitingstartdate);
+            //lastUpdated = cutDownDate(array[i].crfd0_recruitingstartdate);
+
+	lastupdated = array[i].crfd0_recruitingstartdate;
+		
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
 
 	console.log('Original: ' + array[i].crfd0_recruitingstartdate + ' - Formatted: ' + lastUpdated + '');
+
+		
 		
             // append content to parent elements
             newLink.appendChild(jobReqId);
