@@ -111,7 +111,7 @@ function printArrayToDOM(array) {
             jobReqId.textContent = array[i].crfd0_jobreqid;
             jobType.textContent = array[i].crfd0_jobtype;
             jobLocation.textContent = `${array[i].crfd0_location} - ${array[i].crfd0_region}`;
-            ////jobSalary.textContent = array[i].crfd0_paytextforadvert;
+            jobSalary.textContent = array[i].crfd0_paytextforadvert;
 
 //let originalDateString = array[i].crfd0_recruitingstartdate;
 	
