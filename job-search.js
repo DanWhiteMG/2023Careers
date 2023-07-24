@@ -126,7 +126,7 @@ function printArrayToDOM(array) {
 		
             //jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
 
-	console.log('Original: ' + array[i].crfd0_recruitingstartdate + ' - Formatted: ' + lastUpdated + '');
+	//console.log('Original: ' + array[i].crfd0_recruitingstartdate + ' - Formatted: ' + lastUpdated + '');
 
 		
 		
