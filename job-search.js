@@ -122,9 +122,9 @@ function printArrayToDOM(array) {
             //lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
             //lastUpdated = cutDownDate(array[i].crfd0_recruitingstartdate);
 
-	lastUpdated = array[i].crfd0_recruitingstartdate;
+	//lastUpdated = array[i].crfd0_recruitingstartdate;
 		
-            jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
+            //jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
 
 	console.log('Original: ' + array[i].crfd0_recruitingstartdate + ' - Formatted: ' + lastUpdated + '');
 
@@ -136,7 +136,7 @@ function printArrayToDOM(array) {
             newLink.appendChild(jobType);
             newLink.appendChild(jobLocation);
             //newLink.appendChild(jobSalary);
-            newLink.appendChild(jobDate);
+            //newLink.appendChild(jobDate);
             newDiv.appendChild(newLink);
             searchResults.appendChild(newDiv);
         }
