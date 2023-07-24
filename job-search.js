@@ -43,26 +43,26 @@ function storeQueryData(array) {
 
 // Function to format date to UK date format
 
-function stringToDate(_date, _format, _delimiter) {
-    let formatLowerCase = _format.toLowerCase();
-    let formatItems = formatLowerCase.split(_delimiter);
-    let dateItems = _date.split(_delimiter);
-    let monthIndex = formatItems.indexOf("mm");
-    let dayIndex = formatItems.indexOf("dd");
-    let yearIndex = formatItems.indexOf("yyyy");
-    let month = parseInt(dateItems[monthIndex]);
-    month -= 1;
-    let formatedDate = new Date(dateItems[yearIndex],month,dateItems[dayIndex]);
-    return formatedDate;
-}
+// function stringToDate(_date, _format, _delimiter) {
+//     let formatLowerCase = _format.toLowerCase();
+//     let formatItems = formatLowerCase.split(_delimiter);
+//     let dateItems = _date.split(_delimiter);
+//     let monthIndex = formatItems.indexOf("mm");
+//     let dayIndex = formatItems.indexOf("dd");
+//     let yearIndex = formatItems.indexOf("yyyy");
+//     let month = parseInt(dateItems[monthIndex]);
+//     month -= 1;
+//     let formatedDate = new Date(dateItems[yearIndex],month,dateItems[dayIndex]);
+//     return formatedDate;
+// }
 
 // Function to shorten date
 
-function cutDownDate(originalDateString) {
-	let dateNew2023 = new Date(originalDateString);
-	let formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
-	return formattedDateNew2023;
-}
+// function cutDownDate(originalDateString) {
+// 	let dateNew2023 = new Date(originalDateString);
+// 	let formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
+// 	return formattedDateNew2023;
+// }
 
 
 // Function to print array to DOM
@@ -113,7 +113,7 @@ function printArrayToDOM(array) {
             jobLocation.textContent = `${array[i].crfd0_location} - ${array[i].crfd0_region}`;
             ////jobSalary.textContent = array[i].crfd0_paytextforadvert;
 
-let originalDateString = array[i].crfd0_recruitingstartdate;
+//let originalDateString = array[i].crfd0_recruitingstartdate;
 	
 		
 	// amend date format to UK date format for Last Updated Date 
