@@ -110,7 +110,7 @@ function printArrayToDOM(array) {
 	const formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
 		
 	// amend date format to UK date format for Last Updated Date
-		console.log('Hello ' + formattedDateNew2023 + '');
+		console.log('Original: ' + originalDateString+ ' - Formatted: ' + formattedDateNew2023 + '');
             let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate, "dd/mm/yyyy", "/"); //Updated
             lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
             lastUpdated = formattedDateNew2023;
