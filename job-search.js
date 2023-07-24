@@ -107,8 +107,7 @@ function printArrayToDOM(array) {
 		
 	// amend date format to UK date format for Last Updated Date
 				
-            let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate@OData.Community.Display.V1.FormattedValue
-, "dd/mm/yyyy", "/"); //Updated
+            let lastUpdated = stringToDate(array[i].crfd0_recruitingstartdate@OData.Community.Display.V1.FormattedValue, "dd/mm/yyyy", "/"); //Updated
             lastUpdated = lastUpdated.toLocaleDateString(lastUpdated);
             jobDate.textContent = `Recruiting Start Date: ${lastUpdated}`; //Updated
             // append content to parent elements
