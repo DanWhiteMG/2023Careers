@@ -56,6 +56,7 @@ function stringToDate(_date, _format, _delimiter) {
     return formatedDate;
 }
 
+
 // Function to print array to DOM
 
 
@@ -105,9 +106,9 @@ function printArrayToDOM(array) {
             ////jobSalary.textContent = array[i].crfd0_paytextforadvert;
 
 
-	const originalDateString = array[i].crfd0_recruitingstartdate;
-	const dateNew2023 = new Date(originalDateString);
-	const formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
+	let originalDateString = array[i].crfd0_recruitingstartdate;
+	let dateNew2023 = new Date(originalDateString);
+	let formattedDateNew2023 = dateNew2023.toLocaleDateString('en-GB'); // "17/07/2023"
 		
 	// amend date format to UK date format for Last Updated Date 
 		console.log('Original: ' + originalDateString+ ' - Formatted: ' + formattedDateNew2023 + '');
